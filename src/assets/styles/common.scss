@@ -1,0 +1,147 @@
+@import "/variables";
+
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+    color: $regularFont;
+}
+#app {
+    height: 100%;
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px;
+    font-size: 14px;
+    background-color: $grey;
+    @include breakpoint(mobileonly) {
+        width: 100%;
+    }
+    @include breakpoint(tablet) {
+        width: 100%;
+    }
+}
+.Content {
+    position: relative;
+    margin-top: 15px;
+}
+
+// Header
+.Header {
+    // position: relative;
+    position: sticky;
+    top: 0;
+    width: 400px;
+    z-index: 99;
+    @include breakpoint(mobileonly) {
+        width: 100%;
+    }
+    @include breakpoint(tablet) {
+        width: 100%;
+    }
+    &--title {
+        width: 100%;
+        text-align: center;
+        color: $white!important;
+        font-size: 16px!important;
+        z-index: 5;
+    }
+}
+.v-toolbar--prominent {
+    .Header {
+        &--title {
+            width: 100%;
+            text-align: center;
+            color: $white!important;
+            padding-bottom: 50px!important;
+            font-size: 16px!important;
+            z-index: 5;
+        }
+    } 
+}
+.headFixed {
+    position: sticky;
+    top: 0;
+    width: 400px;
+    z-index: 99;
+    @include breakpoint(mobileonly) {
+        width: 100%;
+    }
+    @include breakpoint(tablet) {
+        width: 100%;
+    }
+}
+.v-overlay__scrim {
+    margin-right: auto;
+    margin-left: auto;
+    width: 400px!important;
+    @include breakpoint(mobileonly) {
+        width: 100%!important;
+    }
+    @include breakpoint(tablet) {
+        width: 100%!important;
+    }
+}
+.v-dialog:not(.v-dialog--fullscreen) {
+    max-height: 100%!important;
+}
+.v-dialog {
+    border-radius: 0px!important;
+    margin: 245px 0px 0px 0px!important;
+    box-shadow: none;
+    width: 400px;
+    height: 100%;
+    position: fixed;
+    @include breakpoint(mobileonly) {
+        width: 100%!important;
+        margin: 220px 0px 0px 0px!important;
+    }
+    @include breakpoint(tablet) {
+        width: 100%!important;
+    }
+}
+.slick-dots {
+    list-style: none;
+    display:flex;
+    text-align: center;
+    width: 23%;
+    margin: auto;
+    li {
+        background:$default;
+        height: 2px;
+        width: 10px;
+        margin-right: 5px;
+        &:last-child {
+            margin-right: 0px;
+        }
+        button {
+            font-size: 0px;
+        }
+    }
+    li.slick-active {
+        background:$bluePersib;
+        width: 25px;
+    }
+}
+.v-input {
+    box-shadow: none!important;
+    label{
+        font-size: 14px!important;
+    }
+}
+.v-list-item__title {
+    font-size: 14px!important;
+}
+.v-select__selections {
+    font-size: 14px!important;
+}
+.v-text-field.v-text-field--solo:not(.v-text-field--solo-flat)>.v-input__control>.v-input__slot {
+    box-shadow: none!important;
+    border-bottom: 1px solid $default!important;
+    border-radius: 0px!important;
+}
+.PopularItem {
+    .slick-slide {
+        margin-right: 20px!important;
+    }
+}
